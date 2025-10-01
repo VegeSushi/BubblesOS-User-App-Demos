@@ -61,5 +61,3 @@ print_newline:
     mov al, 0x0A
     int 0x10
     ret
-
-times 512*4-($-$$) db 0 ; pad to 4KB max
