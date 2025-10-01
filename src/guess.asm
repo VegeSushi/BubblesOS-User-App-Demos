@@ -5,10 +5,11 @@ start:
     mov ah, 00h
     int 1Ah
     mov al, dh
+    xor al, dl   ; combine bytes for more variation
     mov bl, 10
     xor ah, ah
     div bl
-    mov [rand_num], al
+    mov [rand_num], ah
 
 .loop:
     ; Print new line
